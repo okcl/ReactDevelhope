@@ -7,8 +7,8 @@ export class Welcome extends React.Component {
             propName = this.props.name
         }
         return (
-            <div>
-                <h2> Hello, {propName} !</h2>
+            <div class="message">
+                <p> Hello, {propName} !</p>
                 <p>Your age is {this.props.age}</p>
             </div>
         )
