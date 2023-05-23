@@ -16,11 +16,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 1vmin);
   color: white;
   text-align: center;
 }
 
-.Message{
-  font-size: calc(5px + 1vmin);
+.App-header :first-child{
+  font-size: calc(10px + 2vmin);
 }

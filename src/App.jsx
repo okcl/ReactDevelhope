@@ -1,11 +1,13 @@
 import './App.css';
-import Welcome from './Welcome.jsx';
+import Hello from './Hello.jsx';
+import Message from './Message.jsx';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Welcome name={"Ozzy"} />
+        <Hello />
+        <Message />
       </header>
     </div>
   );
