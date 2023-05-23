@@ -6,7 +6,12 @@ export class Welcome extends React.Component {
         if(this.props.name){
             propName = this.props.name
         }
-        return <h2> Hello, {propName} !</h2>
+        return (
+            <div>
+                <h2> Hello, {propName} !</h2>
+                <p>Your age is {this.props.age}</p>
+            </div>
+        )
     }
 }
 
