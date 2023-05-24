@@ -8,13 +8,17 @@ export class Welcome extends React.Component {
         if(this.props.age){
             isAgePresent = true;
         }
+        var isInScope = false //default age scope variable
+        if(this.props.age>18 && this.props.age<65){
+            isInScope = true;
+        }
         if(this.props.name){
             propName = this.props.name
         }
         return (
             <div class="message">
                 <p> Hello, {propName} !</p>
-                {isAgePresent && <Age age={this.props.age} />}
+                {(isAgePresent && isInScope) &&<Age age={this.props.age} />} 
             </div> 
         )
     }
