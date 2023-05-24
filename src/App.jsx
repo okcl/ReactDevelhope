@@ -2,7 +2,7 @@ import './App.css';
 import Welcome from './Welcome.jsx';
 
 function App() {
-  let name = <strong>Ozzy</strong>
+  let name = <strong>John</strong>
   return (
     <div className="App">
       <header className="App-header">
