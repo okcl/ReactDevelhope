@@ -1,13 +1,13 @@
 import React from "react";
 
-export class Welcome extends React.Component {
+class Welcome extends React.Component {
     render () {
-        var propName = "Neo"
-        if(this.props.name){
-            propName = this.props.name
-        }
-        return <h2> Hello, {propName} !</h2>
+        return <h2> Hello, {this.props.name} !</h2>
     }
 }
+
+Welcome.defaultProps = {
+    name: "Neo"
+  };
 
 export default Welcome
