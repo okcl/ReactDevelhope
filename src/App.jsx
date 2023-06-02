@@ -1,13 +1,11 @@
 import './App.css';
-import Hello from './Hello.jsx';
-import Message from './Message.jsx';
+import Counter from './Counter';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Hello />
-        <Message />
+        <Counter />
       </header>
     </div>
   );
