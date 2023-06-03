@@ -24,3 +24,12 @@
 .App-header :first-child{
   font-size: calc(10px + 2vmin);
 }
+
+button{
+  width: 100px;
+  height: 50px;
+}
+
+button:hover{
+  opacity: 0.65;
+}

@@ -1,11 +1,11 @@
 import './App.css';
-import Counter from './Counter';
+import ClickTracker from './ClickTracker';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Counter />
+        <ClickTracker />
       </header>
     </div>
   );
