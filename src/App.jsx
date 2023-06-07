@@ -1,11 +1,15 @@
 import './App.css';
-import InteractiveWelcome from './InteractiveWelceme';
+import Login from './Login';
 
 function App() {
+  const onLogin = (state) => {
+    console.log(state);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <InteractiveWelcome />
+        <Login onLogin={onLogin}/>
       </header>
     </div>
   );

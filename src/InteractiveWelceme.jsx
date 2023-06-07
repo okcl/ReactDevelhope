@@ -14,7 +14,7 @@ class InteractiveWelcome extends React.Component{
     }
 
     render(){
-        return <div>
+        return <div >
             <Welcome name={this.state.username}/>
             <input onChange={this.usernameRealtimeChange}/>
         </div>
