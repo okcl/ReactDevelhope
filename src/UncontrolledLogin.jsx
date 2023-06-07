@@ -22,7 +22,7 @@ class MyUncontrolledForm extends React.Component{
                 <h3>Uncontrolled Form</h3>
 
                 <form onSubmit={this.handleFormSubmit} className="login">
-                    <input name="username"/>
+                    <input name="username" autoFocus/>
                     <input name="password" type="password" />
                     <input name="remember" type="checkbox"/>
 
