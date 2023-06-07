@@ -1,15 +1,11 @@
 import './App.css';
-import Login from './Login';
+import MyUncontrolledForm from './UncontrolledLogin';
 
 function App() {
-  const onLogin = (state) => {
-    console.log(state);
-  };
-
   return (
     <div className="App">
       <header className="App-header">
-        <Login onLogin={onLogin}/>
+        <MyUncontrolledForm />
       </header>
     </div>
   );
