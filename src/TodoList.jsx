@@ -16,7 +16,8 @@ class TodoList extends React.Component{
         if(this.state.inputValue) {
             const updatedToDos = [...this.state.toDos, this.state.inputValue];
             this.setState({
-                toDos: updatedToDos
+                toDos: updatedToDos,
+                inputValue: ''
             })
         }
     } 
@@ -30,6 +31,7 @@ class TodoList extends React.Component{
                 </ul>
                 <input 
                 type="text" 
+                value={this.state.inputValue}
                 onChange={this.handleInputChange}/>
                 <button onClick={this.addList}>Add</button>
             </div>
