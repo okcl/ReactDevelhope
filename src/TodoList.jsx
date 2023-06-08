@@ -28,20 +28,8 @@ class TodoList extends React.Component{
         })
     }
 
-    removeItem = (key) => {
-            const updatedToDos = this.state.toDos.filter((item, index) => index !== key)
-            this.setState({
-                toDos: updatedToDos
-            })
-    }
-
     render() {
-        const ulTodos = this.state.toDos.map((todo, index) => (
-            <li key={index}>
-                {todo}
-                <button id="smlBtn" onClick={() => this.removeItem(index)}>Remove</button>
-            </li>
-        ))
+        const ulTodos = this.state.toDos.map((todo, index) => (<li key={index}>{todo}</li>))
         return(
             <div>
                 <ul>
