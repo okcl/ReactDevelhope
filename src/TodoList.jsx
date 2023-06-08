@@ -22,6 +22,12 @@ class TodoList extends React.Component{
         }
     } 
 
+    clearList = () => {
+        this.setState({
+            toDos: []
+        })
+    }
+
     render() {
         const ulTodos = this.state.toDos.map((todo, index) => (<li key={index}>{todo}</li>))
         return(
@@ -33,7 +39,10 @@ class TodoList extends React.Component{
                 type="text" 
                 value={this.state.inputValue}
                 onChange={this.handleInputChange}/>
-                <button onClick={this.addList}>Add</button>
+                <div>
+                    <button onClick={this.addList}>Add</button>
+                    <button onClick={this.clearList}>Reset</button>
+                </div>
             </div>
         )
     }
