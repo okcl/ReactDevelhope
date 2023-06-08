@@ -36,16 +36,10 @@ class TodoList extends React.Component{
     }
 
     render() {
-        const ulTodos = this.state.toDos.map((todo, index) => (
-            <li key={index}>
-                {todo}
-                <button id="smlBtn" onClick={() => this.removeItem(index)}>Remove</button>
-            </li>
-        ))
         return(
             <div>
                 <ul>
-                    {ulTodos}
+                    {this.props.addTodo(this.state.toDos, this.removeItem)}
                 </ul>
                 <input 
                 type="text" 
