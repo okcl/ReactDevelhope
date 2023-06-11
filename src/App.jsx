@@ -1,20 +1,40 @@
-import './App.css';
-import TodoList from './TodoList';
-function App() {
-  const addTodo = (array, removeItem) => {
-    return array.map((todo, index) => (
-      <li key={index}>
-          {todo}
-          <button id="smlBtn" onClick={() => removeItem(index)}>Remove</button>
-      </li>
-))}
-  return (
-    <div className="App">
-      <header className="App-header">
-        <TodoList addTodo={addTodo}/>
-      </header>
-    </div>
-  );
+import React from 'react';
+import './index.css'
+import DisplayLanguage from './DisplayLanguage';
+import { LanguageContext } from './LanguageContext';
+
+class App extends React.Component{
+
+  state = {
+    language: 'en'
+  }
+
+  handleLanguageChange = (event) => {
+    this.setState({
+      language: event.target.value
+    })
+  }
+
+  render() {
+    return (
+      <div className="bg-gray-800 min-h-screen flex flex-col items-center justify-center text-white text-center">
+        <header>
+          <div>
+            <select 
+            value={this.state.language}
+            onChange={this.handleLanguageChange}
+            className='bg-gray-700 text-white rounded py-2 px-4 border-none'>
+              <option value="en">🇬🇧 English</option>
+              <option value="it">🇮🇹 Italiano</option>
+            </select>
+            <LanguageContext.Provider value={this.state.language}>
+              <DisplayLanguage />
+            </LanguageContext.Provider>
+          </div>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
