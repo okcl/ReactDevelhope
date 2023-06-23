@@ -12,7 +12,7 @@ function GithubUser({ username }){
     }, [username])
     
     return(
-        <div>
+        <div className="text-white">
             {data && <h1>{data.name}</h1>}
         </div>
     )
