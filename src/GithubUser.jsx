@@ -5,7 +5,7 @@ function GithubUser({ username }){
     return(
         <div className="text-white">
             {loading && <h1>Loading..</h1>}
-            {error && <h1 className="text-red">An error accoured</h1>}
+            {error && <h1>An error accoured</h1>}
             {data && <h1>Name of the user is: {data.name}</h1>}
         </div>
     )
