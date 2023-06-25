@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="bg-gray-800 min-h-screen flex flex-col items-center justify-center text-white text-center">
       <div className="bg-gray-400 hover:bg-gray-600">
-        <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="/language">Language</Link> | <Link to="/login">Login Form</Link> | <Link to="/asdasfasd">Invalid Page</Link> | <Link to="/users">GitHub Users</Link>
+        <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="/language">Language</Link> | <Link to="/login">Login Form</Link> | <Link to="/asdasfasd">Invalid Page</Link> | <Link to="/users">Users</Link>
       </div>
 
       <Routes>
