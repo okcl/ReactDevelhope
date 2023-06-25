@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function GithubUserList() {
   const [inputText, setInputText] = useState("");
@@ -29,6 +29,7 @@ function GithubUserList() {
           </li>
         ))}
       </ul>
+      <Outlet></Outlet>
     </div>
   );
 }

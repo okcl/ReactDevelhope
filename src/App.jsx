@@ -16,14 +16,14 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<ShowGithubUser />} />
+        <Route path="/" element={<h1>Welcome</h1>} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/language" element={<DisplayLanguage />} />
         <Route path="/login" element={<LoginForm />} />
 
-        <Route path="/users" element={<GithubUserList />}>
-          <Route path="" element={<div>Add a user and select it</div>} />
-          <Route path=":username" element={<ShowGithubUser />} />
+        <Route path="users" element={<GithubUserList />}>
+          <Route index element={<div>Add a user and select it</div>} />
+          <Route path=":username" element={<div><ShowGithubUser /></div>} />
         </Route>
 
         <Route
