@@ -1,6 +1,6 @@
 import useCounter from "./useCounter"
 
-function HookCounter({ initialValue = 0}) {
+function Counter({ initialValue = 0}) {
 
     const {counter, onIncrement, onDecrement, onReset} = useCounter()
 
@@ -14,4 +14,4 @@ function HookCounter({ initialValue = 0}) {
     )
 }
 
-export default HookCounter
+export default Counter

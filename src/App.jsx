@@ -1,21 +1,17 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './index.css'
-import FilteredList from './FilteredList';
+import Counter from './Counter';
 
 
 function App() {
 
-  const list = [
-    { id: 1, name: 'John', age: 20 },
-    { id: 2, name: 'Jane', age: 25 },
-    { id: 3, name: 'Alex', age: 17 },
-    { id: 4, name: 'Sarah', age: 30 },
-  ];
-
 
   return (
     <div className="bg-gray-800 min-h-screen flex flex-col items-center justify-center text-white text-center">
-      <FilteredList list={list} />
+      <Routes>
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
     </div>
   )
 }
