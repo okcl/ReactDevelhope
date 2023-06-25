@@ -1,7 +1,10 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import './index.css'
 import ShowGithubUser from './ShowGithubUser';
+import DisplayLanguage from './DisplayLanguage';
+import Counter from './Counter';
+import LoginForm from './LoginForm';
 
 
 function App() {
@@ -9,9 +12,16 @@ function App() {
 
   return (
     <div className="bg-gray-800 min-h-screen flex flex-col items-center justify-center text-white text-center">
+      <div className="bg-gray-400 hover:bg-gray-600">
+        <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="/language" >Language</Link> | <Link to="/login" >Login Form</Link>
+      </div>
+
       <Routes>
         <Route path="/" element={<ShowGithubUser />} />
         <Route path="/:username" element={<ShowGithubUser />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/language" element={<DisplayLanguage />} />
+        <Route path="/login" element={<LoginForm />} />
       </Routes>
     </div>
   )
